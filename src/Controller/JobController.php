@@ -52,6 +52,22 @@ class JobController extends Controller
         
     }
 
+    /**
+     * Finds and displays a job entity.
+     *
+     * @Route("/job/{id}", name="job.show", methods="GET", requirements={"id" = "\d+"})
+     *
+     *
+     * @return Response
+     */
+    public function show($id) : Response
+    {
+        $job = $id;
+        return $this->render('job/show.html.twig', [
+            'job' => $job,
+        ]);
+    }
+
 
 
 
